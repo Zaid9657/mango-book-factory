@@ -1,2 +1,8 @@
 # Never commit live API keys
 .claude/skills/mango-book-factory/assets/gemini_key.txt
+
+# Generated intermediates (raw Gemini attempts, render checks)
+*_page*.png
+*_render_check*
+raw_images/
+__pycache__/

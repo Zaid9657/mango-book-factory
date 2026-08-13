@@ -14,7 +14,7 @@ Mango: small, round, cute baby crocodile — chubby body, stubby legs, big round
 ## Workflow (run in this order)
 
 ### Step 0 — Which book?
-Read `references/series_plan.md`. Determine the next book **by checking the working folder (and any output/project folders from previous runs) for existing `Mango_and_the_*` PDFs** — produce the first book in the plan that has no PDF yet. Books marked ✅ SHIPPED in the plan are always treated as done even if no PDF is found. If Zaid names a specific book or topic in his message, that overrides the automatic choice. State which book you're producing in one line, then go — do not ask for confirmation on scheduled runs.
+Read `references/series_plan.md`. Determine the next book **by checking the repo's `books/` directory** — a book is done if its `books/NN-slug/` folder exists (with an `*_INTERIOR.pdf` or a shipped-marker note). Produce the first book in the plan that has no folder yet. Books marked ✅ SHIPPED in the plan are always treated as done even if no PDF is found. If Zaid names a specific book or topic in his message, that overrides the automatic choice. State which book you're producing in one line, then go — do not ask for confirmation on scheduled runs.
 
 ### Step 1 — Draft the story
 Write the story yourself (no external model call). Spec:
@@ -35,11 +35,11 @@ Check: failed-attempt beat present? Gogo line sticky and short? No psychiatric j
 Run `scripts/build_interior.py` after editing its STORY list (7 text blocks, split from the draft) and back-matter strings (parent note, this book's color chart row if new, activity page themed to this book's skill). Layout is locked: title page, dedication/copyright, 7 × (full-page image + facing text page), closing message, 2-page parent note, feeling-colors chart, activity, series teaser, "this book belongs to", blank — exactly 24 pages. Verify by rendering 2–3 pages with `pdftoppm` before presenting.
 
 ### Step 5 — Build cover wrap
-- Create the titled front cover: take this book's strongest image (or a dedicated cover render), composite the title in Baloo 2 (download per script comments), cream fill + dark-green outline, placed in empty sky area — **never a white box**.
+- Create the titled front cover: take this book's strongest image (or a dedicated cover render), composite the title in Baloo 2 (bundled at `fonts/Baloo2.ttf` in the repo — no download needed), cream fill + dark-green outline, placed in empty sky area — **never a white box**.
 - Run `scripts/build_cover.py` after setting TITLE, blurb hook line, and blurb body. Geometry is locked for 8.5×8.5", 24 pages, premium color (spine 0.0563"); includes barcode safe zone.
 
 ### Step 6 — Deliver
-Present both PDFs (`*_INTERIOR.pdf`, `*_COVER.pdf`) with a one-line KDP reminder: paperback, 8.5×8.5, premium color, white paper, bleed ON. Mark the book done in the conversation and tell Zaid which book is next in the plan.
+Present both PDFs (`*_INTERIOR.pdf`, `*_COVER.pdf`) with a one-line KDP reminder: paperback, 8.5×8.5, premium color, white paper, bleed ON. Then archive the book in the repo: commit a `books/NN-slug/` folder containing both PDFs, `manuscript.md`, `parent_note.md`, and `scene_prompts.md` (see `books/README.md`), and tell Zaid which book is next in the plan.
 
 ## Environment notes (hard-won, do not rediscover)
 - This container has network access: Gemini API calls run here directly. `pip install google-genai pillow reportlab --break-system-packages`.

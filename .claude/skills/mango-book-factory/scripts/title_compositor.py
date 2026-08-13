@@ -1,3 +1,4 @@
+import pathlib
 from PIL import Image, ImageDraw, ImageFont
 
 src = "/mnt/user-data/uploads/in_a_classic_cinematic_3D_202606040213.jpeg"
@@ -5,12 +6,20 @@ im = Image.open(src).convert("RGB")
 W, H = im.size  # 2048 x 2048
 draw = ImageDraw.Draw(im)
 
-# Use a try-variable font; set a heavy weight by loading at large size
+# Baloo 2 ships in the repo as a variable font — select the ExtraBold instance
 def load(sz):
-    try:
-        return ImageFont.truetype("Baloo2.ttf", sz)
-    except:
-        return ImageFont.truetype("/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf", sz)
+    for path in ("fonts/Baloo2.ttf", "Baloo2.ttf",
+                 pathlib.Path(__file__).resolve().parents[4] / "fonts" / "Baloo2.ttf"):
+        try:
+            f = ImageFont.truetype(str(path), sz)
+            try:
+                f.set_variation_by_name("ExtraBold")
+            except OSError:
+                pass
+            return f
+        except OSError:
+            continue
+    return ImageFont.truetype("/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf", sz)
 
 # Two lines for nice stacking
 line1 = "Mango and"

@@ -33,9 +33,12 @@ Why each link works:
 
 ## State: the tracker file
 
-All launch state lives in `C:\Users\zaid1\OneDrive\Desktop\Mango Books\LAUNCH_TRACKER.md`
-(create from `assets/launch_tracker_template.md` if missing). Every session
-reads it first and updates it before finishing. Never rely on session memory.
+All launch state lives in `LAUNCH_TRACKER.md` at the repo root of
+`mango-book-factory` (create from `assets/launch_tracker_template.md` if
+missing). Every session reads it first and commits an update before finishing.
+Never rely on session memory. (The old copy at
+`C:\Users\zaid1\OneDrive\Desktop\Mango Books\LAUNCH_TRACKER.md` is legacy —
+the repo file wins.)
 
 ## Workflow 1 — Launch a book (run per book, weekly cadence)
 
