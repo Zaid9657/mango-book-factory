@@ -1,0 +1,2 @@
+# Never commit live API keys
+.claude/skills/mango-book-factory/assets/gemini_key.txt
