@@ -13,12 +13,30 @@ Mango: small, round, cute baby crocodile — chubby body, stubby legs, big round
 
 ## Workflow (run in this order)
 
-### Step 0 — Which book?
-Read `references/series_plan.md`. Determine the next book **by checking the repo's `books/` directory** — a book is done if its `books/NN-slug/` folder exists (with an `*_INTERIOR.pdf` or a shipped-marker note). Produce the first book in the plan that has no folder yet. Books marked ✅ SHIPPED in the plan are always treated as done even if no PDF is found. If Zaid names a specific book or topic in his message, that overrides the automatic choice. State which book you're producing in one line, then go — do not ask for confirmation on scheduled runs.
+### Step 0 — Freeze check, then which book?
+**First check `LAUNCH_TRACKER.md` at the repo root. If production is FROZEN
+(it is, per the 2026-08-13 audit), do NOT produce a new book** — tell Zaid the
+freeze is active, what the SCALE bar is, and produce only if he explicitly
+overrides in his own words. Scheduled/routine runs never override the freeze.
+Cover revisions, interior fixes, and re-exports of the two LIVE books are
+always allowed — the freeze blocks only new titles.
+
+When unfrozen: read `references/series_plan.md`. Determine the next book **by
+checking the repo's `books/` directory** — a book is done if its
+`books/NN-slug/` folder exists (with an `*_INTERIOR.pdf` or a shipped-marker
+note). Produce the first backlog book that has no folder yet. Books marked
+✅ SHIPPED in the plan are always treated as done even if no PDF is found. If
+Zaid names a specific book or topic in his message, that overrides the
+automatic choice. State which book you're producing in one line, then go.
 
 ### Step 1 — Draft the story
 Write the story yourself (no external model call). Spec:
-- Ages 6–9, read-alone or read-together. **1,200–1,400 words** before page-splitting.
+- Ages **4–8** (audit 2026-08-13: picture-book buying peaks 3–6 and every
+  competing indie SEL title targets 3–7/4–8; 6–9 kids have moved to chapter
+  books). Read-together first, read-alone capable.
+- **700–1,000 words** before page-splitting (old 1,200–1,400 spec meant
+  70–78 words/page — dense text crowding premium-color art; typical picture
+  books run 500–1,000 words total).
 - Arc (mandatory): happy opening → the feeling's trigger → back-ridge color changes → Mango struggles → **a failed first attempt** (trying the "obvious" fix makes it worse) → Gogo reframes with one sticky line (see plan for each book's line) → Mango applies it under real pressure → earned win, back-ridge glows → quiet night reflection → closing message "For every kid who…".
 - Never preachy. Show, don't lecture. Gogo gets ONE memorable line per book, like book 1's "Don't trap it — aim it."
 - End matter text: write the 2-page "A Note for Parents" from a child & adolescent psychiatrist's perspective for this book's topic: what the feeling is, why the intuitive parental response backfires, 4 concrete home strategies, and a calm "when to seek support" paragraph. Same warm, non-clinical register as book 1.
@@ -36,10 +54,18 @@ Run `scripts/build_interior.py` after editing its STORY list (7 text blocks, spl
 
 ### Step 5 — Build cover wrap
 - Create the titled front cover: take this book's strongest image (or a dedicated cover render), composite the title in Baloo 2 (bundled at `fonts/Baloo2.ttf` in the repo — no download needed), cream fill + dark-green outline, placed in empty sky area — **never a white box**.
+- **Front cover must also carry** (audit 2026-08-13): the author name with
+  credential ("Dr. …, Child & Adolescent Psychiatrist" — whichever claim is
+  the true one, consistent with the listing) and the series number
+  ("Mango the Crocodile · Book N"). The credential is the series' only
+  defensible differentiator and it was invisible on the product.
+- **Back cover must be illustrated** — a scene or character art with the blurb
+  over it, plus the credential and a series strip. Never a plain cream page
+  with centered text.
 - Run `scripts/build_cover.py` after setting TITLE, blurb hook line, and blurb body. Geometry is locked for 8.5×8.5", 24 pages, premium color (spine 0.0563"); includes barcode safe zone.
 
 ### Step 6 — Deliver
-Present both PDFs (`*_INTERIOR.pdf`, `*_COVER.pdf`) with a one-line KDP reminder: paperback, 8.5×8.5, premium color, white paper, bleed ON. Then archive the book in the repo: commit a `books/NN-slug/` folder containing both PDFs, `manuscript.md`, `parent_note.md`, and `scene_prompts.md` (see `books/README.md`), and tell Zaid which book is next in the plan.
+Present both PDFs (`*_INTERIOR.pdf`, `*_COVER.pdf`) with a one-line KDP reminder: paperback, 8.5×8.5, premium color, white paper, bleed ON. Remind Zaid the Kindle edition must be built **fixed-layout** (Kindle Create / Kids' Book Creator) — never upload a reflowable file for a picture book — and that a hardcover edition should be set up alongside the paperback. Then archive the book in the repo: commit a `books/NN-slug/` folder containing both PDFs, `manuscript.md`, `parent_note.md`, and `scene_prompts.md` (see `books/README.md`), and tell Zaid which book is next in the plan.
 
 ## Environment notes (hard-won, do not rediscover)
 - This container has network access: Gemini API calls run here directly. `pip install google-genai pillow reportlab --break-system-packages`.

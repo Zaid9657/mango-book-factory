@@ -1,118 +1,143 @@
 ---
 name: mango-launch-playbook
-description: Run the locked launch-and-growth process for every "Mango the Crocodile" book on Amazon KDP — metadata (search-query subtitles, categories, keywords), Kindle Unlimited setup, launch-week checklist with extension prompts, free-promo-day scheduling, the Day-30 market-vote check, and the winners-only German translation gate. ALWAYS use this skill whenever Zaid says "launch book N", "publish the next Mango book to KDP", "run the launch checklist", "day-30 check", "which books are winners", "should we translate this one", "write the KDP metadata", or any question about Mango marketing, reviews, categories, keywords, KU, free days, or German editions. Production of the book itself belongs to mango-book-factory; everything AFTER the PDFs exist belongs here. Never improvise launch steps from scratch — this skill holds the verified formula.
+description: Run the launch-and-growth process for every "Mango the Crocodile" book on Amazon KDP — metadata (search-query subtitles, categories, keywords), listing conversion (interior images, A+ Content, pricing, hardcover), the €5/day Amazon Ads demand test, KDP compliance checks, the paperback-units decision gate, and the MedMeister-audience German play. ALWAYS use this skill whenever Zaid says "launch book N", "publish the next Mango book to KDP", "run the launch checklist", "day-30 check" / "decision gate", "which books are winners", "should we translate this one", "write the KDP metadata", or any question about Mango marketing, reviews, categories, keywords, KU, ads, or German editions. Production of the book itself belongs to mango-book-factory; everything AFTER the PDFs exist belongs here. Never improvise launch steps from scratch.
 ---
 
 # Mango Launch Playbook
 
-The locked, evidence-based launch process for the Mango the Crocodile series.
-Built July 2026 from verified analysis of fast-winning indie SEL authors
-(new books cracking category top-20 with 5–22 ratings, zero ad spend).
+Rebuilt 2026-08-13 after an investor-grade audit (`AUDIT-2026-08-13.md` at the
+repo root) falsified several parts of the original "verified formula". Treat
+this version as the working hypothesis, not gospel — every rule here is
+downstream of the audit's evidence, and the decision gate exists precisely so
+the market can overrule it.
 
-**North star: let the market vote across the series; concentrate translations,
-collections, and any future ad budget on the 2–3 proven winners only.**
-
-## The verified formula (never deviate without new evidence)
-
-Search-query title → Kindle Unlimited → small-category #1 New Release badge →
-free-promo newsletters for day-1 downloads → 3–5 fast reviews in launch week →
-Day-30 market vote → double down on winners → translate winners to German.
-
-Why each link works:
-- Amazon boosts new titles for ~30 days (the "honeymoon"); a handful of early
-  borrows/reviews inside that window outranks hundreds of late ones.
-- Parents search problems, not authors. A subtitle that IS the search phrase
-  ranks organically on long-tail terms with zero ads.
-- KU borrows count toward rank and remove the price/trust barrier for an
-  unknown author. Every winner analyzed was in KDP Select.
-- Small subcategories hand out #1 New Release badges for a few launch-week
-  sales; the orange badge then drives real clicks.
-- Translation of a proven winner beats a new book: one analyzed author earns
-  ~$2k/mo from 3 books (one concept, three languages) — the same as another
-  earns from 27.
+**North star: one real demand channel pointed at two conversion-ready
+listings, then a hard KILL/SCALE decision on 2026-10-15. Print royalties are
+the business; everything else is instrumentation.**
 
 ## State: the tracker file
 
-All launch state lives in `LAUNCH_TRACKER.md` at the repo root of
-`mango-book-factory` (create from `assets/launch_tracker_template.md` if
-missing). Every session reads it first and commits an update before finishing.
-Never rely on session memory. (The old copy at
-`C:\Users\zaid1\OneDrive\Desktop\Mango Books\LAUNCH_TRACKER.md` is legacy —
-the repo file wins.)
+All launch state lives in `LAUNCH_TRACKER.md` at the repo root. Every session
+reads it first and commits an update before finishing. **Reconcile against KDP
+ground truth before any decision** — the audit found the tracker wrong on
+almost every material point (wrong book live, unknown Kindle/KU status,
+unrecorded sales). When Zaid reports KDP numbers, log them with the date.
+Weekly KDP→tracker sync is part of any launch session.
 
-## Workflow 1 — Launch a book (run per book, weekly cadence)
+## Compliance first (highest expected value in the playbook)
 
-Precondition: the book folder exists with interior PDF, cover PDF, and
-KDP_paste_sheet.md (produced by mango-book-factory).
+- **AI-content disclosure**: KDP requires disclosing AI-generated text and
+  images at title setup. Verify it is answered accurately for every title
+  before anything else. An inaccurate disclosure risks account-level
+  termination — asymmetrically expensive versus anything Mango can earn.
+- **Reviews: genuine only.** Never solicit reviews from friends, family, or
+  anyone with a material connection — regardless of verified-purchase status.
+  This replaces the old "3–5 network reviews in launch week" step, which was
+  Amazon review abuse and the single most account-endangering line in the old
+  playbook. Legitimate paths: more buyers (ads), a review request line in the
+  back matter, Author Central following.
+- **Credential claim**: one consistent, true claim everywhere (subtitle,
+  description, cover, back cover, Author Central). "By" and "with the guidance
+  of" are different claims — pick the true one. Medical disclaimer in the
+  front matter of every book.
+- If ANY KDP notification arrives about AI content, quality, or review abuse:
+  stop all Mango activity and protect the account. Do not appeal-and-continue.
 
-### Step 1: Metadata (generate, then hand to Zaid)
-- **Subtitle** = exact parent search phrase + age + credential:
-  "A Children's Book About [Problem] and [Skill] for Kids Ages 6–9 —
-  by a Child Psychiatrist". The title is the traffic source.
-- **Series**: "Mango the Crocodile" (KDP series page; every book joins it).
-- **7 backend keywords**: long-tail variations of the subtitle phrase only.
-  Never broad head terms ("kids emotions book", "children's feelings").
-- **Categories**: 2 small subcategories + 1 medium. A subcategory is "small
-  enough" when its current #1 New Release has fewer than ~20 ratings (check
-  via a browser-extension prompt on the category's New Releases page).
-- **Description**: benefit-led, opens with the parent's problem as a question,
-  3–5 "Why parents love this book" bullets, credential paragraph near the end.
-- Read `references/metadata_patterns.md` for the full templates and the
-  extension prompt library before writing.
+## Workflow 1 — Make a listing conversion-ready (precondition for any traffic)
 
-### Step 2: Formats
-- Paperback $12.99 AND Kindle edition $3.99.
-- Kindle MUST be enrolled in KDP Select (→ Kindle Unlimited). Non-negotiable;
-  KU is the ranking engine.
+A listing that cannot convert makes every ad euro worthless. Checklist per book:
 
-### Step 3: Launch week checklist (give Zaid the dated checklist)
-- Day 1: publish both formats together.
-- Day 2–3: schedule 2 of the 5 KDP Select free days; submit the free promo to
-  free-ebook newsletter sites (OHFB and similar free-listing sites).
-- Day 1–7: 3–5 people from Zaid's network buy or borrow and review. Target:
-  first review live by day 5–7. Speed beats volume inside the honeymoon.
-- Log launch date and actions in LAUNCH_TRACKER.md.
+1. **Metadata**
+   - Subtitle = exact parent search phrase + age band + credential:
+     "A Children's Book About [Problem] and [Skill] for Kids Ages **4–8**…".
+     Long-tail subtitles demonstrably rank (Book 1: #14 organic for
+     "children's book about paying attention") — keep this.
+   - **Series field**: every book in the "Mango the Crocodile" series with its
+     number in the title field ("Mango the Crocodile N"). Book 2 shipped
+     without it and Amazon showed "Book 1 of 1" — the cross-sell that
+     justifies a series was dead.
+   - 7 backend keywords: long-tail variations only, never head terms.
+   - **Categories**: must include an ADHD / Special Needs / Disability node
+     where topical (use KDP's category request tool), plus Emotions &
+     Feelings. Never Self-Esteem (owned by evergreen trade classics).
+   - Description: benefit-led, opens with the parent's problem as a question,
+     3–5 "why parents love it" bullets, credential paragraph near the end.
+   - Templates: `references/metadata_patterns.md`.
+2. **Listing assets**
+   - 5–7 interior spread images uploaded to the listing. A parent will not buy
+     an illustrated book they cannot see inside.
+   - A+ Content: series banner, the color-chart mechanic, the credential.
+   - Author name + "Dr." + series number ON the cover (factory revises).
+3. **Formats & pricing**
+   - Paperback **$9.99–$10.99** (audit: $12.99 was the most expensive
+     per-page item in the category; competitors' hardcovers sell at $6–12;
+     nearest direct competitor $9.99). Verify actual print cost first — if
+     it exceeds ~$3.50, flag to Zaid before pricing.
+   - **Hardcover $17.99–$19.99** — the format gift buyers and
+     schools/counselors actually buy.
+   - Kindle $3.99, **fixed-layout** (not reflowable — reflowable picture
+     books render as text blocks and cap KENP at ~10–20 pages).
+   - KDP Select/KU: keep enrollment, but treat KU as **discovery only** — a
+     full read pays ≈$0.05. Never a revenue line, never the decision metric.
 
-## Workflow 2 — Day-30 market vote (run when any book hits day 30)
+## Workflow 2 — The demand test (the actual experiment)
 
-For each book at day 30+, record in LAUNCH_TRACKER.md: Kindle BSR, paperback
-BSR, rating count, average stars (collected via a read-only extension prompt
-on the product pages).
+The audit's core finding: nothing was ever wrong with Book 1's launch —
+**no launch was ever run**, so there is no demand data at all. The test:
 
-Verdicts (the number decides — no judgment calls, no rescue attempts):
-- **WINNER**: Kindle BSR under ~50,000 → queue German edition, A+ Content,
-  future collection/ads.
-- **UNDECIDED**: between 50k and ~300k → wait 30 more days, no investment.
-- **DONE**: drifting past ~300,000 → stop investing. It stays on the shelf
-  (cross-sell + page-reads) but gets nothing more. Do not polish losers.
+- Amazon Ads, **€5/day**, exact-match keywords (ADHD, focus, anger, big
+  feelings phrases), pointed at the **paperback**, both live books, 60 days,
+  ~€300 budget.
+- One honest email to the MedMeister physician list (see Workflow 3).
+- No free-ebook newsletter promos — that's an adult-fiction mechanic
+  (free download → binge → buy next); picture books are bought in print,
+  as gifts, by adults, and a free ebook converts to ~nothing. (Removed from
+  the old playbook.)
+- Weekly during the test: log impressions, CTR, ACOS, paperback units, and
+  royalties in the tracker.
+- Early abort signal: >10,000 impressions at <0.2% CTR = the cover/price
+  can't compete for attention — that's a KILL trigger, not an optimization
+  target.
 
-## Workflow 3 — German line (winners only)
+## Workflow 3 — The MedMeister audience (unused distribution asset)
 
-Gate: a book must be a WINNER in English before any German work starts.
-Then: mango-book-factory produces "Mango das Krokodil" from the same
-illustrations; German search-query subtitle (same formula, German phrases);
-launch on amazon.de with the identical Workflow-1 sequence. The German SEL
-shelf is thinner — same effort, less competition.
+MedMeister's list is German physicians: disproportionately parents of young
+children, instantly able to validate the credential, and exactly who
+paediatricians ask for book recommendations. One honest email costs nothing
+and outweighs every promo newsletter. This also inverts the old German gate:
+**German is where the audience already is** — an audience play now, not a
+translation prize for English winners. Caveats: German buyers are the least
+AI-tolerant picture-book market and the shelf is owned by Carlsen/Loewe/
+Oetinger — sell on the clinician credential, not the art. Any German edition
+still requires Zaid's explicit go.
 
-## Workflow 4 — Monthly trend scan (optional accelerator)
+## Workflow 4 — Decision gate (2026-10-15, no judgment calls)
 
-Once a month, scan TikTok Shop / BookTok kids-book hashtags for a topic
-spiking (the "Murphy's Law for kids" pattern: TikTok manufactures demand,
-spillover lands as Amazon search within weeks, copycats swarm, window closes).
-If a rising topic fits Mango's world, it jumps the production queue —
-the factory can ship in days, faster than any competitor.
+Decision metrics: **paperback units/month and royalty/month.** Never Kindle
+BSR — it conflates $0.05 borrows with sales and ignores print, where ~100% of
+revenue is. (The old WINNER/UNDECIDED/DONE BSR thresholds are retired: <50k
+was a top-percentile bar mislabeled as a pass, >300k described every new indie
+book, and the range between had no rule.)
 
-## Do-not list (each rule paid for with someone's money)
+The KILL / immediate-KILL / SCALE criteria live in `LAUNCH_TRACKER.md` and are
+binding. If SCALE is hit, the frozen backlog in the factory's series plan
+reopens; otherwise archive the listings, keep the pipeline as a proven
+capability, and return the hours to MedMeister.
 
-- No Amazon ads until a book has 10+ ratings.
-- No broad keywords; never fight incumbents (e.g. "A Little SPOT") on head terms.
-- No polishing losers after the market votes.
-- No simultaneous multi-book dumps — each book needs its own honeymoon.
-- No skipping KDP Select enrollment.
+## Do-not list
+
+- No producing new books while the tracker says FROZEN.
+- No review solicitation from anyone you know. Ever.
+- No free-ebook newsletter promos.
+- No head-term keywords; never fight incumbents (e.g. "A Little SPOT").
+- No polishing losers after the gate decides.
+- No German translation without Zaid's explicit go (audience email ≠ edition).
+- No trusting this tracker without a KDP reconciliation date on it.
 
 ## Division of labor
 
-Claude generates: metadata packs, extension prompts, checklists, tracker
-updates, verdicts, German queue. Zaid does by hand: all KDP clicks (publish,
-free days, Select enrollment), newsletter submissions, reviewer pings.
-Always tell Zaid explicitly which is which, in order.
+Claude generates: metadata packs, A+ Content drafts, ad keyword lists,
+descriptions, checklists, tracker updates, gate verdicts. Zaid does by hand:
+all KDP clicks (disclosure check, series linking, pricing, hardcover setup,
+category requests, image uploads, ads console), Author Central, the
+MedMeister email send. Always tell Zaid explicitly which is which, in order.

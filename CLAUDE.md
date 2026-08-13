@@ -3,6 +3,19 @@
 This repo is the single source of truth for the "Mango the Crocodile" KDP
 children's book series: production pipeline, launch state, and finished books.
 
+## Current state (2026-08-13 audit — read `AUDIT-2026-08-13.md`)
+
+- Live: Book 1 "The Busy Brain" (ADHD) and Book 2 "The Red-Hot Back" (anger),
+  both paperback + Kindle + KU. Lifetime: 1 sale, 1 review, 0 KENP.
+- **PRODUCTION IS FROZEN** — no new books until the SCALE bar in
+  `LAUNCH_TRACKER.md` is hit. Current work = fix the two live listings, run
+  the 60-day ad test, decide KILL/SCALE on 2026-10-15.
+- Reconcile `LAUNCH_TRACKER.md` against KDP before any launch decision — the
+  audit found it wrong on nearly every point, and decisions made from it were
+  noise.
+- Never solicit reviews from personal contacts; verify KDP AI-content
+  disclosure before touching listings (account-level risk).
+
 ## Repo map
 
 - `.claude/skills/mango-book-factory/` — production pipeline (story → Gemini

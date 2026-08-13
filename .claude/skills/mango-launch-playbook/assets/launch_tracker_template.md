@@ -1,12 +1,16 @@
-# Mango Launch Tracker
-<!-- One row per book. Update at launch and at every Day-30 check. -->
-<!-- Verdicts: WINNER (<50k Kindle BSR) / UNDECIDED (50k-300k) / DONE (>300k) -->
+# Mango Launch Tracker (template)
 
-| # | Book | Launch date | KU enrolled | Free days used | Reviews wk1 | Day-30 Kindle BSR | Day-30 Paperback BSR | Ratings | Verdict | German queued |
-|---|------|-------------|-------------|----------------|-------------|-------------------|----------------------|---------|---------|---------------|
-| 1 | Mango and the Busy Brain | 2026-07-12 (paperback live) | no — Kindle edition pending | 0/5 | — | — | — | — | — | — |
-| 2 | Mango and the Wiggly Wait | draft | no | — | — | — | — | — | — | — |
-| 3 | Mango and the Red-Hot Back | draft | no | — | — | — | — | — | — | — |
+<!-- The live tracker is LAUNCH_TRACKER.md at the repo root — never fork it.
+     This template exists only for structure reference. Decision metrics are
+     paperback units/month and royalty/month, NEVER Kindle BSR. -->
+
+| # | Book | Feeling | Paperback live | Kindle live | KU | Price (pb/Kindle) | Lifetime sales | KENP | Reviews | BSR | Notes |
+|---|------|---------|----------------|-------------|----|--------------------|----------------|------|---------|-----|-------|
+|   |      |         |                |             |    |                    |                |      |         |     |       |
+
+## Decision gate
+<!-- Copy the current KILL / immediate-KILL / SCALE criteria from the live
+     tracker; they are binding and dated. -->
 
 ## Action log
-- 2026-07-12: Book 1 paperback published. Kindle edition + KU enrollment = next step.
+<!-- Dated entries, newest last. Every KDP reconciliation gets a dated entry. -->
