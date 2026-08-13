@@ -4,11 +4,11 @@
 
 `A Children's Book About [PROBLEM PHRASE] and [SKILL PHRASE] for Kids Ages 4–8 — [CREDENTIAL]`
 
-**[CREDENTIAL]** = whichever claim is actually true, verbatim identical
-everywhere (subtitle, description, cover, Author Central): "by a Child
-Psychiatrist" only if Zaid authored as the psychiatrist; otherwise "with
-Guidance from a Child Psychiatrist". The 2026-08-13 audit found the live
-listings making both claims at once — a misrepresentation risk.
+**[CREDENTIAL]** = **"by a Child Psychiatrist"** — resolved 2026-08-14:
+Zaid is a child & adolescent psychiatrist and the author. Verbatim identical
+everywhere (subtitle, description, cover, Author Central); long form
+"Dr. Zaid Alzureiqat — Child & Adolescent Psychiatrist". Never "with the
+guidance of" (Book 1's back-cover error).
 Age band is **4–8** (audit: the market for this format sits at 3–7/4–8, not 6–9).
 
 The PROBLEM PHRASE must be a phrase parents actually type. Test: search it on
@@ -17,9 +17,10 @@ the wild (verified ranking organically with zero ads):
 - "A Children's Book About Grumpiness, Big Emotions, and Emotional Regulation for Kids Ages 3–7"
 - "Children's Book to Ease School Anxiety, Build Confidence, and Learn Social Skills"
 
-Mango examples (with [CREDENTIAL] resolved per the rule above):
-- Busy Brain → "A Children's Book About Focus, a Busy Mind, and Paying Attention for Kids Ages 4–8 — [CREDENTIAL]"
-- Red-Hot Back → "A Children's Book About Anger, Big Feelings, and Calming Down for Kids Ages 4–8 — [CREDENTIAL]"
+Mango examples (Kindle editions only — paperback subtitles are permanently
+locked at their published values):
+- Busy Brain → "A Children's Book About Focus, a Busy Mind, and Paying Attention for Kids Ages 4–8 — by a Child Psychiatrist"
+- Red-Hot Back → "A Children's Book About Anger, Big Feelings, and Calming Down for Kids Ages 4–8 — by a Child Psychiatrist"
 
 ## 7 backend keywords (pattern)
 
