@@ -65,6 +65,12 @@ A listing that cannot convert makes every ad euro worthless. Checklist per book:
      Cloud). The series widget shows "Book 1 of 1" until #2 is filled;
      accepted cost. Any future book must claim its number in BOTH the KDP
      series page and the title text before the 72h lock (below).
+   - **Always click "Publish series" after any series edit.** KDP stages
+     series changes behind a "your series has changes that have not been
+     published" banner and they do nothing until published — this silently
+     killed the cross-sell on both live books until 2026-08-14 (Book 1 read
+     "Book 1 of 1", Book 2 showed no widget at all). The series has its own
+     review state, separate from the books. Verify the banner clears.
    - **72-hour lock**: paperback title, subtitle, and author name become
      permanently uneditable ~72h after publish. Verify all three — and the
      series number in the title text — within the first day of publishing.

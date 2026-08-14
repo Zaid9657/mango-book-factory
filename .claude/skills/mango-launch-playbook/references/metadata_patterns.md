@@ -24,14 +24,26 @@ locked at their published values):
 
 ## 7 backend keywords (pattern)
 
-Long-tail only, each a plausible search:
+Long-tail only, each a plausible search, each under 50 characters:
 1. children's book about [problem]
 2. [problem] book for kids ages 4-8
 3. kids book about [skill]
 4. [emotion] picture book for children
 5. social emotional learning book [topic]
 6. help child with [problem]
-7. [topic] book written by psychiatrist
+7. [topic] book by a child psychiatrist
+
+Live sets (submitted 2026-08-14, both formats per book):
+- **Busy Brain**: adhd book for kids · children's book about paying
+  attention · children's book about focus for kids ages 4-8 · busy mind
+  picture book for children · help child focus and concentrate at school ·
+  focus and attention book by a child psychiatrist · social emotional
+  learning book about focus
+- **Red-Hot Back**: anger management book for kids · calm down book for
+  kids · children's book about anger for kids ages 4-8 · big feelings
+  picture book for children · children's book about calming down and
+  breathing · anger book by a child psychiatrist · social emotional
+  learning book about anger
 
 ## Description skeleton
 
@@ -47,13 +59,31 @@ Long-tail only, each a plausible search:
 
 ## Category selection
 
-Must include an **ADHD / Special Needs / Disability** node where topical
-(request via KDP's category tool) — the audit found the ADHD book filed with
-no ADHD category at all. Then 1–2 small subcategories (small = current #1
-New Release has < ~20 ratings; verify freshness each time) plus Emotions &
-Feelings as the medium/discovery category. **Never Self-Esteem** — owned by
-evergreen trade classics (its #1 has 36k+ reviews); no badge was ever
-available there.
+Verified against KDP's live picker 2026-08-14. **There is no children's-books
+ADHD node.** The useful nodes for this series:
+
+| Node | ID | Use for |
+|------|-----|---------|
+| Parenting & Relationships › Disabilities & Hyperactivity › Hyperactivity | 157625011 | The ADHD intent node — Amazon's ADD/ADHD shelf. ADHD titles only |
+| Children's › Growing Up & Facts of Life › Difficult Discussions › Disability › Fiction | 155871011 | Children's-side neighbour for ADHD/neurodiversity titles |
+| Children's › …Friendship, Social Skills & School Life › Emotions & Feelings › Fiction | 155884011 | The core SEL node — correct shelf for a picture book |
+| Children's › Growing Up & Facts of Life › Health › Mindfulness & Meditation | — | Calm-down/breathing titles (anger, anxiety). Small node |
+
+Rules:
+- **Topical honesty wins.** Never put a non-disability title in a disability
+  node to chase traffic — a mismatch costs CTR and conversion, which are the
+  metrics the demand test measures. (Book 2, an anger book, deliberately has
+  no ADHD/Disability node.)
+- Keep at least one children's *fiction* node per format. A picture book
+  filed only under Parenting shelves competes with adult guides.
+- All 3 slots are always full, so every addition displaces something. Drop
+  generic nodes first (Short Stories) — they carry no topical signal and are
+  full of trade classics.
+- **Never Self-Esteem & Self-Respect** or Inspirational & Personal Growth —
+  owned by evergreen classics (Self-Esteem's #1 has 36k+ reviews); no badge
+  was ever available there. Both were removed from the live books.
+- Formats need not match exactly; diversifying nodes across paperback and
+  Kindle covers more browse traffic.
 
 ## Extension prompt library (Claude Chrome extension, read-only)
 
