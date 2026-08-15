@@ -107,8 +107,13 @@ The audit's core finding: nothing was ever wrong with Book 1's launch —
 
 - Amazon Ads, **€5/day**, exact-match keywords (ADHD, focus, anger, big
   feelings phrases), pointed at the **paperback**, both live books, 60 days,
-  ~€300 budget.
-- One honest email to the MedMeister physician list (see Workflow 3).
+  ~€300 budget. **The campaign plan, keyword lists, negatives and stop rules
+  are already written in `marketing/ads-keywords.md` — use it, don't
+  re-derive it.**
+- One honest email to the MedMeister physician list — drafted in
+  `marketing/medmeister-email.md` (see Workflow 3).
+- Listing conversion assets: `marketing/aplus-content.md` (A+ copy + image
+  slot spec) and `marketing/book1-description.md`.
 - No free-ebook newsletter promos — that's an adult-fiction mechanic
   (free download → binge → buy next); picture books are bought in print,
   as gifts, by adults, and a free ebook converts to ~nothing. (Removed from

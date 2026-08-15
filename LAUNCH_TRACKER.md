@@ -119,14 +119,15 @@ KDP (Ads console unchecked).
 | 2 | Read Aug 2 quality notification | ext | ☑ benign age-range recommendation; should clear once the Kindle age update goes live |
 | 3 | Series linking | ext | ☑ "Publish series" clicked 2026-08-14 → LIVE UPDATES IN REVIEW. Numbering kept at 1 / 3. Re-check the rendered widget string after propagation |
 | 4 | Consistent credential claim | ext + factory (covers later) | ◐ Kindle subtitles submitted with "by a Child Psychiatrist". Still open: covers, Author Central, medical disclaimer, and the "Dr." author-name mismatch (deferred by decision 5) |
-| 5 | Interior spread images + A+ Content | Claude drafts / Zaid uploads | ☐ needs interior PDFs from Zaid |
+| 5 | Interior spread images + A+ Content | Claude drafts / Zaid uploads | ◐ copy done — `marketing/aplus-content.md` (paste-ready, image slots labelled). Images still need the interior PDFs from Zaid |
 | 6 | Reprice $9.99–10.99 + hardcover editions | Zaid sign-in, then ext | ☐ BLOCKED on print-app sign-in; hardcover needs new cover files (factory) |
 | 7 | Reading age 4–8 + categories | ext | ◐ both Kindles submitted (age 4–8; Self-Esteem/Inspirational/Short Stories removed; ADHD node added to Book 1). Both paperbacks pending the full-wizard pass |
 | 8 | Book 2 benefit-led description | ext | ◐ Kindle submitted; paperback pending |
 | 9 | Print cost + KENPC recorded here | Zaid | ☐ print cost BLOCKED on sign-in — the last missing audit input; KENPC not surfaced (0 KENP anyway — KU already discovery-only) |
-| 10 | Demand test: Ads €5/day + MedMeister email | Zaid | ☐ starts the 60-day clock after 1–8 done |
+| 10 | Demand test: Ads €5/day + MedMeister email | Claude drafted / Zaid runs | ◐ both drafted — `marketing/ads-keywords.md` (campaigns, keywords, negatives, stop rules) and `marketing/medmeister-email.md` (German, no review request). Zaid sets up + sends; starts the 60-day clock after 1–8 done |
 | 11 | Propagation re-check at ~24h and ~72h | ext | ☐ verify on both product pages: series widget string ("Book 1 of N"), new subtitles, reading age 4–8, new category breadcrumb; confirm the Aug 2 notification cleared |
 | 12 | Paperback pass (both books) | Zaid sign-in, then ext | ☐ read-only first (print cost + royalties at $12.99/$10.99/$9.99, paperback + draft AI disclosures), then one complete wizard pass per book — no staged drafts on a live listing |
+| 13 | Book 1 description (never rewritten; still framed 6–9) | Claude drafted / Zaid pastes | ◐ draft ready — `marketing/book1-description.md`; paste to both formats during the paperback pass |
 
 ## Decision gate — 2026-10-15 (no judgment calls)
 
@@ -172,3 +173,8 @@ where ~100% of the revenue is).
   untouched. Paperbacks deliberately not started — no staged drafts on a
   live listing. Next: 24h/72h propagation re-check, then the paperback pass
   once Zaid signs into the print app.
+- 2026-08-14: Marketing drafts written to `marketing/` — ad campaigns +
+  keywords + negatives + stop rules, the German MedMeister email (no review
+  request), A+ Content copy for both books with labelled image slots, and
+  the Book 1 description that had never been rewritten. All are drafts for
+  Zaid to run/paste; nothing sent, nothing spent.
