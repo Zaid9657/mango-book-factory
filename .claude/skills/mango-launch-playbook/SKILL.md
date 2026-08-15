@@ -30,16 +30,22 @@ Weekly KDP→tracker sync is part of any launch session.
   images at title setup. Verify it is answered accurately for every title
   before anything else. An inaccurate disclosure risks account-level
   termination — asymmetrically expensive versus anything Mango can earn.
+  Current truth (2026-08-14): books 1–2 text is human-written (Zaid's
+  attestation) — disclose **images only** (Gemini). Any future
+  factory-produced book is Claude-drafted — disclose **"Yes, entire work"**
+  for text as well. These two patterns must never be mixed up.
 - **Reviews: genuine only.** Never solicit reviews from friends, family, or
   anyone with a material connection — regardless of verified-purchase status.
   This replaces the old "3–5 network reviews in launch week" step, which was
   Amazon review abuse and the single most account-endangering line in the old
   playbook. Legitimate paths: more buyers (ads), a review request line in the
   back matter, Author Central following.
-- **Credential claim**: one consistent, true claim everywhere (subtitle,
-  description, cover, back cover, Author Central). "By" and "with the guidance
-  of" are different claims — pick the true one. Medical disclaimer in the
-  front matter of every book.
+- **Credential claim**: resolved 2026-08-14 — Zaid IS a child & adolescent
+  psychiatrist and the author, so the one true claim, used verbatim
+  everywhere (subtitle, description, cover, back cover, Author Central), is
+  **"by a Child Psychiatrist"** (long form: "Dr. Zaid Alzureiqat — Child &
+  Adolescent Psychiatrist"). Never "with the guidance of" — that was Book 1's
+  back-cover error. Medical disclaimer in the front matter of every book.
 - If ANY KDP notification arrives about AI content, quality, or review abuse:
   stop all Mango activity and protect the account. Do not appeal-and-continue.
 
@@ -53,9 +59,23 @@ A listing that cannot convert makes every ad euro worthless. Checklist per book:
      Long-tail subtitles demonstrably rank (Book 1: #14 organic for
      "children's book about paying attention") — keep this.
    - **Series field**: every book in the "Mango the Crocodile" series with its
-     number in the title field ("Mango the Crocodile N"). Book 2 shipped
-     without it and Amazon showed "Book 1 of 1" — the cross-sell that
-     justifies a series was dead.
+     number in the title field ("Mango the Crocodile N"). Numbering reality
+     (2026-08-14): Book 1 = series #1, Red-Hot Back = series #3 with a
+     permanent gap at #2 (Zaid's decision — reserved for the unmade Worry
+     Cloud). The series widget shows "Book 1 of 1" until #2 is filled;
+     accepted cost. Any future book must claim its number in BOTH the KDP
+     series page and the title text before the 72h lock (below).
+   - **Always click "Publish series" after any series edit.** KDP stages
+     series changes behind a "your series has changes that have not been
+     published" banner and they do nothing until published — this silently
+     killed the cross-sell on both live books until 2026-08-14 (Book 1 read
+     "Book 1 of 1", Book 2 showed no widget at all). The series has its own
+     review state, separate from the books. Verify the banner clears.
+   - **72-hour lock**: paperback title, subtitle, and author name become
+     permanently uneditable ~72h after publish. Verify all three — and the
+     series number in the title text — within the first day of publishing.
+     Kindle fields stay editable; live-paperback fixes are limited to series
+     field, reading age, categories, keywords, and description.
    - 7 backend keywords: long-tail variations only, never head terms.
    - **Categories**: must include an ADHD / Special Needs / Disability node
      where topical (use KDP's category request tool), plus Emotions &
@@ -87,8 +107,13 @@ The audit's core finding: nothing was ever wrong with Book 1's launch —
 
 - Amazon Ads, **€5/day**, exact-match keywords (ADHD, focus, anger, big
   feelings phrases), pointed at the **paperback**, both live books, 60 days,
-  ~€300 budget.
-- One honest email to the MedMeister physician list (see Workflow 3).
+  ~€300 budget. **The campaign plan, keyword lists, negatives and stop rules
+  are already written in `marketing/ads-keywords.md` — use it, don't
+  re-derive it.**
+- One honest email to the MedMeister physician list — drafted in
+  `marketing/medmeister-email.md` (see Workflow 3).
+- Listing conversion assets: `marketing/aplus-content.md` (A+ copy + image
+  slot spec) and `marketing/book1-description.md`.
 - No free-ebook newsletter promos — that's an adult-fiction mechanic
   (free download → binge → buy next); picture books are bought in print,
   as gifts, by adults, and a free ebook converts to ~nothing. (Removed from
