@@ -9,7 +9,13 @@ children's book series: production pipeline, launch state, and finished books.
   both paperback + Kindle + KU. Lifetime: 1 sale, 1 review, 0 KENP.
 - **PRODUCTION IS FROZEN** — no new books until the SCALE bar in
   `LAUNCH_TRACKER.md` is hit. Current work = fix the two live listings, run
-  the 60-day ad test, decide KILL/SCALE on 2026-10-15.
+  the 60-day ad test, decide KILL/SCALE at **Day 0 + 60** (Day 0 = the day the
+  demand test actually starts). The old fixed 2026-10-15 date is void. Hard
+  floor: if the test has not started by **2026-11-01**, the project is killed
+  by default.
+- **State is unverified since 2026-08-14.** The Amazon pages cannot be read
+  from a cloud container (Amazon blocks it) — reconciling requires Zaid's
+  logged-in browser. Never present tracker figures as current without it.
 - Reconcile `LAUNCH_TRACKER.md` against KDP before any launch decision — the
   audit found it wrong on nearly every point, and decisions made from it were
   noise.

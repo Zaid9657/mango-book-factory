@@ -55,17 +55,29 @@ Run `scripts/build_interior.py` after editing its STORY list (7 text blocks, spl
 ### Step 5 — Build cover wrap
 - Create the titled front cover: take this book's strongest image (or a dedicated cover render), composite the title in Baloo 2 (bundled at `fonts/Baloo2.ttf` in the repo — no download needed), cream fill + dark-green outline, placed in empty sky area — **never a white box**.
 - **Front cover must also carry** (audit 2026-08-13): the author name with
-  credential ("Dr. …, Child & Adolescent Psychiatrist" — whichever claim is
-  the true one, consistent with the listing) and the series number
-  ("Mango the Crocodile · Book N"). The credential is the series' only
-  defensible differentiator and it was invisible on the product.
+  credential — the confirmed true claim is **"Dr. Zaid Alzureiqat — Child &
+  Adolescent Psychiatrist"** — and the series number ("Mango the Crocodile ·
+  Book N"). The credential is the series' only defensible differentiator and
+  it was invisible on the product.
 - **Back cover must be illustrated** — a scene or character art with the blurb
   over it, plus the credential and a series strip. Never a plain cream page
-  with centered text.
+  with centered text. Book 1's back cover said "with the guidance of a child
+  & adolescent psychiatrist" — that wording is WRONG (Zaid is the author) and
+  must never recur; it contradicted the subtitle in print.
 - Run `scripts/build_cover.py` after setting TITLE, blurb hook line, and blurb body. Geometry is locked for 8.5×8.5", 24 pages, premium color (spine 0.0563"); includes barcode safe zone.
 
 ### Step 6 — Deliver
-Present both PDFs (`*_INTERIOR.pdf`, `*_COVER.pdf`) with a one-line KDP reminder: paperback, 8.5×8.5, premium color, white paper, bleed ON. Remind Zaid the Kindle edition must be built **fixed-layout** (Kindle Create / Kids' Book Creator) — never upload a reflowable file for a picture book — and that a hardcover edition should be set up alongside the paperback. Then archive the book in the repo: commit a `books/NN-slug/` folder containing both PDFs, `manuscript.md`, `parent_note.md`, and `scene_prompts.md` (see `books/README.md`), and tell Zaid which book is next in the plan.
+Present both PDFs (`*_INTERIOR.pdf`, `*_COVER.pdf`) with a one-line KDP reminder: paperback, 8.5×8.5, premium color, white paper, bleed ON. Remind Zaid the Kindle edition must be built **fixed-layout** (Kindle Create / Kids' Book Creator) — never upload a reflowable file for a picture book — and that a hardcover edition should be set up alongside the paperback.
+
+Two non-negotiable KDP-setup reminders to include with every delivery:
+- **AI disclosure**: factory books are Claude-drafted → the KDP AI-content
+  question must be answered "Yes — Texts: entire work" (plus images: Gemini).
+  Books 1–2 were human-written (Zaid's attestation) and disclose images only —
+  never copy their pattern forward.
+- **72-hour lock**: paperback title, subtitle, and author name become
+  permanently uneditable ~72h after publish (only a new edition can change
+  them). Triple-check those three fields — exact series number in the title
+  field, ages 4–8 in the subtitle, "Dr." author name — BEFORE publishing. Then archive the book in the repo: commit a `books/NN-slug/` folder containing both PDFs, `manuscript.md`, `parent_note.md`, and `scene_prompts.md` (see `books/README.md`), and tell Zaid which book is next in the plan.
 
 ## Environment notes (hard-won, do not rediscover)
 - This container has network access: Gemini API calls run here directly. `pip install google-genai pillow reportlab --break-system-packages`.
