@@ -9,6 +9,14 @@ on almost every material point, and every decision downstream of it was noise.
 below. The 13-book plan is dead as a default; the backlog survives only as a
 contingency for a proven winner.
 
+> ⚠️ **STATE UNVERIFIED SINCE 2026-08-14 (six weeks).** As of 2026-09-29 nothing
+> below has been reconciled against KDP: it is unknown whether the Aug 14 Kindle
+> updates went live, whether the series widget healed, whether any sales,
+> reviews or KDP notifications have occurred, and whether the demand test ever
+> started. **Run the status pull and update this file before making any
+> decision from it.** Treating the figures below as current would repeat the
+> exact failure the audit was written about.
+
 Figures verified 2026-08-14 by a read-only browser session inside KDP
 (Phase 1–2 of the fix run), except where marked BLOCKED.
 
@@ -129,9 +137,24 @@ KDP (Ads console unchecked).
 | 12 | Paperback pass (both books) | Zaid sign-in, then ext | ☐ read-only first (print cost + royalties at $12.99/$10.99/$9.99, paperback + draft AI disclosures), then one complete wizard pass per book — no staged drafts on a live listing |
 | 13 | Book 1 description (never rewritten; still framed 6–9) | Claude drafted / Zaid pastes | ◐ draft ready — `marketing/book1-description.md`; paste to both formats during the paperback pass |
 
-## Decision gate — 2026-10-15 (no judgment calls)
+## Decision gate — Day 0 + 60 days (reset 2026-09-29)
 
-**KILL** if, after the fix window and ≥€300 ad spend, ANY of:
+**Day 0 = the day the demand test actually starts** (first ad impression served,
+or the MedMeister email sent, whichever comes first). Record Day 0 here the day
+it happens; the gate falls 60 days later.
+
+The original fixed date of 2026-10-15 is **void**. It was set assuming the
+60-day test began mid-August; it never began, so that date could only have
+produced a verdict about a test that never ran.
+
+**Start-by floor — 2026-11-01.** If Day 0 has not happened by then, the project
+is **KILLED by default**, no further analysis. This floor is the price of moving
+the date: a deadline with no floor drifts forever, and six weeks of no movement
+(2026-08-15 → 2026-09-29) is itself evidence about how much attention this can
+command against MedMeister. Nothing about the books changes that calculus — the
+fix window was ever only ~12 hours of work.
+
+**KILL at Day 0 + 60** if, after ≥€300 ad spend, ANY of:
 - Combined paperback units < 20/month, or
 - Combined royalties < €100/month, or
 - Fewer than 8 genuine, unaffiliated reviews across both books, or
@@ -178,3 +201,11 @@ where ~100% of the revenue is).
   request), A+ Content copy for both books with labelled image slots, and
   the Book 1 description that had never been rewritten. All are drafts for
   Zaid to run/paste; nothing sent, nothing spent.
+- 2026-09-29: Six weeks with no recorded activity. Repo untouched since
+  2026-08-15; PR #3 still open and unmerged. Attempted to verify the live
+  listings without KDP credentials (Firecrawl out of credits, WebFetch 500,
+  curl returned Amazon's bot-block page, headless Chromium blocked) — the
+  Amazon pages are NOT readable from the cloud container. Zaid's logged-in
+  browser is the only path to current numbers. Decision gate reset from the
+  void 2026-10-15 date to Day 0 + 60, with a 2026-11-01 start-by floor that
+  kills the project by default if the demand test has not begun.

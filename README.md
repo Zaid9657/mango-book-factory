@@ -2,8 +2,9 @@
 
 Production pipeline and launch system for the **Mango the Crocodile** children's
 picture book series (Amazon KDP). One feeling/skill per book. Two books live;
-**production is frozen pending the 2026-10-15 market decision** — see
-`AUDIT-2026-08-13.md` and `LAUNCH_TRACKER.md`.
+**production is frozen** pending the market decision — the gate falls 60 days
+after the demand test starts. Read `AUDIT-2026-08-13.md` for why, and
+`LAUNCH_TRACKER.md` for current state and the kill/scale criteria.
 
 ## Repo map
 

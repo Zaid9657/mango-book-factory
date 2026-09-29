@@ -2,7 +2,9 @@
 
 **Status: DRAFT for Zaid to set up. Nothing has been spent.** This is action 10
 in `LAUNCH_TRACKER.md` — the only step in the whole fix window that can produce
-a real market signal before the 2026-10-15 decision.
+a real market signal. **The day this switches on is Day 0** — the decision
+gate falls 60 days later, and if Day 0 hasn't happened by 2026-11-01 the
+project is killed by default.
 
 ## Campaign structure
 
@@ -90,7 +92,7 @@ never KU borrows.
 - **Kill immediately** if ads deliver **>10,000 impressions at <0.2% CTR**.
   That means the cover and price cannot compete for attention, and no
   downstream optimisation fixes it.
-- At the 2026-10-15 gate, blended **ACOS >100% with no month-over-month
+- At the Day 0 + 60 gate, blended **ACOS >100% with no month-over-month
   improvement** is one of the KILL triggers.
 - Do not raise budget above €5/day to "give it a chance". The test is designed
   to be cheap; a bigger budget buys a more expensive version of the same answer.

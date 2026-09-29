@@ -12,7 +12,8 @@ downstream of the audit's evidence, and the decision gate exists precisely so
 the market can overrule it.
 
 **North star: one real demand channel pointed at two conversion-ready
-listings, then a hard KILL/SCALE decision on 2026-10-15. Print royalties are
+listings, then a hard KILL/SCALE decision 60 days after the test starts.
+Print royalties are
 the business; everything else is instrumentation.**
 
 ## State: the tracker file
@@ -136,7 +137,7 @@ AI-tolerant picture-book market and the shelf is owned by Carlsen/Loewe/
 Oetinger — sell on the clinician credential, not the art. Any German edition
 still requires Zaid's explicit go.
 
-## Workflow 4 — Decision gate (2026-10-15, no judgment calls)
+## Workflow 4 — Decision gate (Day 0 + 60, no judgment calls)
 
 Decision metrics: **paperback units/month and royalty/month.** Never Kindle
 BSR — it conflates $0.05 borrows with sales and ignores print, where ~100% of
