@@ -23,6 +23,9 @@ children's book series: production pipeline, launch state, and finished books.
   "make the next book" request.
 - `.claude/skills/mango-launch-playbook/` — everything after the PDFs exist:
   KDP metadata, KU, launch week, Day-30 market vote, German translation gate.
+- `.claude/skills/reverse-engineer-anything/` + `.mcp.json` — REA (Reverse
+  Engineer Anything): looks inside apps, sites and binaries without their
+  source. Vendored from rea-agents 6.4.0 (MIT); see its SOURCE.md.
 - `books/` — one folder per finished book (PDFs, manuscript, parent note,
   scene prompts). **This is the ground truth for which books exist** — the
   factory's Step 0 scans it to pick the next book.
